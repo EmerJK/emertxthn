@@ -1,0 +1,12 @@
+.mes.txtai_processed .name_text::after {
+    content: '🔍';
+    margin-left: 5px;
+}
+
+.txtai_box {
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: rgba(70, 70, 70, 0.2);
+}

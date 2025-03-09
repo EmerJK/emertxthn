@@ -1,0 +1,63 @@
+<div id="txtai_thinking_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>txtai Thinking</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="flex-container">
+                <label class="checkbox_label" for="txtai_thinking_enabled">
+                    <input id="txtai_thinking_enabled" type="checkbox" class="checkbox">
+                    <span>Enabled</span>
+                </label>
+            </div>
+
+            <div class="flex-container flexFlowColumn">
+                <label for="txtai_api_url">
+                    txtai API URL
+                </label>
+                <input id="txtai_api_url" class="text_pole" type="text" placeholder="http://localhost:8000/api/search" />
+            </div>
+
+            <div class="flex-container marginTopBot5">
+                <div class="flex-container flex1 flexFlowColumn" title="How many last messages will be matched for relevance.">
+                    <label for="txtai_query_messages">
+                        <small>Query messages</small>
+                    </label>
+                    <input type="number" id="txtai_query_messages" class="text_pole" min="1" max="99" />
+                </div>
+                <div class="flex-container flex1 flexFlowColumn" title="Cut-off score for relevance. Helps to filter out irrelevant data.">
+                    <label for="txtai_score_threshold">
+                        <small>Score threshold</small>
+                    </label>
+                    <input type="number" id="txtai_score_threshold" class="text_pole" min="0" max="1" step="0.05" />
+                </div>
+                <div class="flex-container flex1 flexFlowColumn" title="Prioritize chunking on the preferred delimiter.">
+                    <label for="txtai_chunk_boundary">
+                        <small>Chunk boundary</small>
+                    </label>
+                    <textarea id="txtai_chunk_boundary" class="text_pole" rows="1" placeholder="(None)"></textarea>
+                </div>
+            </div>
+
+            <div class="flex-container flexFlowColumn">
+                <label for="txtai_template">
+                    <span>Response Template</span>
+                    <small>(Use TXTAI_TEXT as placeholder for search results)</small>
+                </label>
+                <textarea id="txtai_template" class="margin0 text_pole textarea_compact" rows="5" placeholder="Use TXTAI_TEXT as placeholder for the search results."></textarea>
+            </div>
+
+            <hr>
+
+            <div class="flex-container">
+                <div id="txtai_test_connection" class="menu_button menu_button_icon" title="Test connection to txtai API.">
+                    <span>Test Connection</span>
+                </div>
+                <div id="txtai_clear_search" class="menu_button menu_button_icon" title="Clear current search results.">
+                    <span>Clear Current Results</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
